@@ -7,7 +7,7 @@ class FormYayasan {
     const data = req.body;
     console.log(data);
     const msg = {
-      to: "alangmahendra@gmail.com",
+      to: ["alangmahendra@gmail.com","info@penabumi.com"],
       from: "foundationForm@penabumi.com",
       subject: `[YAYASAN MENDAFTAR] - ${data.values.namaYayasan}`,
       text:"test",

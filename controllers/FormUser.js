@@ -7,9 +7,9 @@ class FormUser {
         const data = req.body;
         console.log(data);
         const msg = {
-          to: "alangmahendra@gmail.com",
-          from: "foundationForm@penabumi.com",
-          subject: `[YAYASAN MENDAFTAR] - ${data.values.nama}`,
+          to: ["alangmahendra@gmail.com","info@penabumi.com"],
+          from: "personalForm@penabumi.com",
+          subject: `[KANDIDAT MENDAFTAR] - ${data.values.nama}`,
           text:"test",
           html: `
                 <div>
@@ -39,6 +39,18 @@ class FormUser {
                             <tr>
                             <td>Alamat</td>
                             <td>${data.values.alamat}</td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                            <td>Email</td>
+                            <td>${data.values.email}</td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                        <tr>
+                            <td>Nomor Hp/Wa</td>
+                            <td>${data.values.noUser}</td>
                             </tr>
                         </tbody>
                         <tbody>
@@ -80,19 +92,19 @@ class FormUser {
                         <tbody>
                             <tr>
                             <td>Jenis Kendaraan</td>
-                            <td>${data.values.kendaraan}</td>
+                            <td>${data.values.kendaraan || "Tidak Ada"}</td>
                             </tr>
                         </tbody>
                         <tbody>
                             <tr>
                             <td>SIM</td>
-                            <td>${data.values.sim}</td>
+                            <td>${data.values.sim || "Tidak Ada"}</td>
                             </tr>
                         </tbody>
                         <tbody>
                             <tr>
                             <td>Status Kepemilikan Kendaraan</td>
-                            <td>${data.values.kepemilikan}</td>
+                            <td>${data.values.kepemilikan || "Tidak Ada"}</td>
                             </tr>
                         </tbody>
                     </table>
@@ -131,6 +143,44 @@ class FormUser {
                             <tr>
                             <td>Email Wali</td>
                             <td>${data.values.emailWali}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <br/>
+                <div>
+                    <table border>
+                        <thead>
+                            <tr>
+                                <th colspan="2">
+                                        <center>
+                                            PENDIDIKAN PENDAFTAR
+                                        </center>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                            <td>Nama Wali/Penanggung Jawab Pendaftar</td>
+                            <td>${data.values.formal}</td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                            <td>Hubungan Kekerabatan Dengan Wali</td>
+                            <td>${data.values.informal || "Tidak Ada"}</td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                            <td>No/Wa Wali</td>
+                            <td>${data.values.bahasa || "Tidak Ada"}</td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                            <td>Email Wali</td>
+                            <td>${data.values.ormas || "Tidak Ada"}</td>
                             </tr>
                         </tbody>
                     </table>
