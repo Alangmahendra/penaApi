@@ -7,7 +7,7 @@ class FormUser {
         const data = req.body;
         console.log(data);
         const msg = {
-          to: ["alangmahendra@gmail.com","info@penabumi.com"],
+          to: "info@penabumi.com",
           from: "personalForm@penabumi.com",
           subject: `[KANDIDAT MENDAFTAR] - ${data.values.nama}`,
           text:"test",
