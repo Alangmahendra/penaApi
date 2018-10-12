@@ -161,25 +161,25 @@ class FormUser {
                         </thead>
                         <tbody>
                             <tr>
-                            <td>Nama Wali/Penanggung Jawab Pendaftar</td>
+                            <td>Pendidikan Formal</td>
                             <td>${data.values.formal}</td>
                             </tr>
                         </tbody>
                         <tbody>
                             <tr>
-                            <td>Hubungan Kekerabatan Dengan Wali</td>
+                            <td>Pendidikan Informal</td>
                             <td>${data.values.informal || "Tidak Ada"}</td>
                             </tr>
                         </tbody>
                         <tbody>
                             <tr>
-                            <td>No/Wa Wali</td>
+                            <td>Bahasa</td>
                             <td>${data.values.bahasa || "Tidak Ada"}</td>
                             </tr>
                         </tbody>
                         <tbody>
                             <tr>
-                            <td>Email Wali</td>
+                            <td>Ikut Dalam Organisasi</td>
                             <td>${data.values.ormas || "Tidak Ada"}</td>
                             </tr>
                         </tbody>
