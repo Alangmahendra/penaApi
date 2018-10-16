@@ -1,9 +1,9 @@
 require('dotenv').config()
 
-const Storage = require('@google-cloud/storage')
+const {Storage} = require('@google-cloud/storage')
 const CLOUD_BUCKET = process.env.CLOUD_BUCKET
 
-const storage = Storage({
+const storage = new Storage({
   projectId : process.env.GCLOUD_PROJECT,
   keyFilename : process.env.KEYFILE_PATH
 })
@@ -17,7 +17,7 @@ const getPublicUrl = (filename) =>{
 const sendUploadToGCS = (req, res, next) =>{
   console.log('masuk sini ', req.file)
   if(!req.file){
-      next()
+      return next()
    }
   
 
@@ -53,7 +53,7 @@ const Multer = require('multer')
 const multer = Multer({
     storage : Multer.memoryStorage(),
     limits : {
-      fileSize : 5 * 1024 * 1024
+      fileSize : 10 * 1024 * 1024
     }
   })
 

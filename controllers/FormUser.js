@@ -6,8 +6,9 @@ class FormUser {
         sgMail.setApiKey(process.env.SENDGRID_KEY);
         const data = req.body;
         console.log(data);
+        const ktp = data.values.ktp.replace(/ /g,"%20")
         const msg = {
-          to: "info@penabumi.com",
+          to: "alangmahendra@gmail.com",
           from: "personalForm@penabumi.com",
           subject: `[KANDIDAT MENDAFTAR] - ${data.values.nama}`,
           text:"test",
@@ -25,20 +26,8 @@ class FormUser {
                         </thead>
                         <tbody>
                             <tr>
-                            <td>Nama </td>
-                            <td>${data.values.nama}</td>
-                            </tr>
-                        </tbody>
-                        <tbody>
-                            <tr>
-                            <td>Tanggal Lahir</td>
-                            <td>${data.values.tglLahir}</td>
-                            </tr>
-                        </tbody>
-                        <tbody>
-                            <tr>
-                            <td>Alamat</td>
-                            <td>${data.values.alamat}</td>
+                            <td>ktp</td>
+                            <td><a href=${ktp} target="">lihat ktp</a></td>
                             </tr>
                         </tbody>
                         <tbody>
@@ -51,36 +40,6 @@ class FormUser {
                         <tr>
                             <td>Nomor Hp/Wa</td>
                             <td>${data.values.noUser}</td>
-                            </tr>
-                        </tbody>
-                        <tbody>
-                            <tr>
-                            <td>Alamat KTP</td>
-                            <td>${data.values.alamatKtp}</td>
-                            </tr>
-                        </tbody>
-                        <tbody>
-                            <tr>
-                            <td>Nomor KTP</td>
-                            <td>${data.values.noKtp}</td>
-                            </tr>
-                        </tbody>
-                        <tbody>
-                            <tr>
-                            <td>Status Pernikahan</td>
-                            <td>${data.values.kawin}</td>
-                            </tr>
-                        </tbody>
-                        <tbody>
-                            <tr>
-                            <td>Jenis Kelamin</td>
-                            <td>${data.values.kelamin}</td>
-                            </tr>
-                        </tbody>
-                        <tbody>
-                            <tr>
-                            <td>Agama</td>
-                            <td>${data.values.agama}</td>
                             </tr>
                         </tbody>
                         <tbody>
