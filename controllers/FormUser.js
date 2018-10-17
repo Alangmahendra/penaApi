@@ -141,13 +141,13 @@ class FormUser {
                         <tbody>
                             <tr>
                             <td>Link Download Ijazah</td>
-                            <td><a href=${data.values.ijazah} target="">ijazah</a></td>
+                            <td>${data.values.ijazah || "Tidak Mengupload"}</td>
                             </tr>
                         </tbody>
                         <tbody>
                         <tr>
                         <td>Link Download Karya</td>
-                        <td><a href=${data.values.karya} target="">karya</a></td>
+                        <td>${data.values.karya || "Tidak Mengupload"}</td>
                         </tr>
                     </tbody>
                     </table>
