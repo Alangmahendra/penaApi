@@ -7,8 +7,8 @@ class FormUser {
         const data = req.body;
         console.log(data);
         const ktp = data.values.ktp.replace(/ /g,"%20")
-        const ijazah = data.values.ijazah.replace(/ /g,"%20")
-        const karya = data.values.karya.replace(/ /g,"%20")
+        // const ijazah = data.values.ijazah.replace(/ /g,"%20")
+        // const karya = data.values.karya.replace(/ /g,"%20")
         const msg = {
           to: "alangmahendra@gmail.com",
           from: "personalForm@penabumi.com",
@@ -141,13 +141,13 @@ class FormUser {
                         <tbody>
                             <tr>
                             <td>Link Download Ijazah</td>
-                            <td><a href=${ijazah} target="">ijazah</a></td>
+                            <td><a href=${data.values.ijazah} target="">ijazah</a></td>
                             </tr>
                         </tbody>
                         <tbody>
                         <tr>
                         <td>Link Download Karya</td>
-                        <td><a href=${karya} target="">karya</a></td>
+                        <td><a href=${data.values.karya} target="">karya</a></td>
                         </tr>
                     </tbody>
                     </table>
