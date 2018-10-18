@@ -7,10 +7,10 @@ class FormUser {
         const data = req.body;
         console.log(data);
         const ktp = data.values.ktp.replace(/ /g,"%20")
-        // const ijazah = data.values.ijazah.replace(/ /g,"%20")
-        // const karya = data.values.karya.replace(/ /g,"%20")
+        const ijazah = data.values.ijazah.replace(/ /g,"%20") 
+        const karya = data.values.karya.replace(/ /g,"%20")
         const msg = {
-          to: "alangmahendra@gmail.com",
+          to: "info@penabumi.com",
           from: "personalForm@penabumi.com",
           subject: `[KANDIDAT MENDAFTAR] - ${data.values.nama}`,
           text:"test",
@@ -52,7 +52,7 @@ class FormUser {
                         </tbody>
                         <tbody>
                             <tr>
-                            <td>Jenis Kendaraan</td>
+                            <td>Punya Kendaraan</td>
                             <td>${data.values.kendaraan || "Tidak Ada"}</td>
                             </tr>
                         </tbody>
@@ -141,13 +141,13 @@ class FormUser {
                         <tbody>
                             <tr>
                             <td>Link Download Ijazah</td>
-                            <td>${data.values.ijazah || "Tidak Mengupload"}</td>
+                            <td><a href=${ijazah} target="">lihat ktp</a></td>
                             </tr>
                         </tbody>
                         <tbody>
                         <tr>
                         <td>Link Download Karya</td>
-                        <td>${data.values.karya || "Tidak Mengupload"}</td>
+                        <td><a href=${karya} target="">lihat ktp</a></td>
                         </tr>
                     </tbody>
                     </table>
