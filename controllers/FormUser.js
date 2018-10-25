@@ -12,7 +12,7 @@ class FormUser {
         const msg = {
           to: "info@penabumi.com",
           from: "personalForm@penabumi.com",
-          subject: `[KANDIDAT MENDAFTAR] - ${data.values.nama}`,
+          subject: `[KANDIDAT MENDAFTAR] - ${data.values.email}`,
           text:"test",
           html: `
                 <div>
